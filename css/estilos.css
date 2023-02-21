@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Merienda:300,regular,500,600,700,800,900);
+@font-face {
+  font-family: "MuseoModerno";
+  src: url(fonts/MuseoModerno/MuseoModerno-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "dancing";
+  src: url(fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "cube";
+  src: url(fonts/cube/Cube.ttf);
+}
+@font-face {
+  font-family: "neon";
+  src: url(fonts/neon/Neon.ttf);
+}
+@font-face {
+  font-family: "teko";
+  src: url(fonts/Teko/Teko-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header, section {
+  padding: 100px 0;
+}
+
+.box-center {
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  color: #fff;
+  font-size: 10vmin;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+h1 .tprincipal {
+  font-family: "Merienda";
+  color: #fff;
+  font-size: 12vmin;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=estilos.css.map */
