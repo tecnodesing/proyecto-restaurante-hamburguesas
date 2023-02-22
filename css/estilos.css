@@ -198,6 +198,16 @@ h5 {
   margin: 0 30px;
 }
 
+.overlay, .oferta::before, .header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .icons {
   display: flex;
   justify-content: space-between;
@@ -216,6 +226,90 @@ h5 {
 }
 .icons a:hover {
   background: #cc6200;
+}
+
+.btn, .btn-primary, .btn-white {
+  width: 170px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn-white {
+  background: #fff;
+  color: #ff7b00;
+}
+.btn-white:hover {
+  background: #cc6200;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #ff7b00;
+  color: #fff;
+}
+.btn-primary:hover {
+  transform: scale(1.1);
+}
+
+.card {
+  width: 30%;
+  height: 300px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+  background-size: cover !important;
+  background-position: center !important;
+  cursor: default;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.card-container .card-title {
+  font-size: 40px;
+  font-weight: 400;
+  padding: 10px 0 0 0;
+  color: #222;
+}
+.card:hover .card-container {
+  opacity: 1;
+}
+
+.card:nth-child(1) {
+  background: url(../../img/product1.jpg);
+}
+
+.card:nth-child(2) {
+  background: url(../../img/product2.jpg);
+}
+
+.card:nth-child(3) {
+  background: url(../../img/product3.jpg);
+}
+
+.card:nth-child(4) {
+  background: url(../../img/product4.jpg);
+}
+
+.card:nth-child(5) {
+  background: url(../../img/product5.jpg);
+}
+
+.card:nth-child(6) {
+  background: url(../../img/product6.jpg);
 }
 
 nav {
@@ -260,15 +354,6 @@ nav a:hover {
   background-size: cover;
   background-position: bottom;
   clip-path: polygon(0 80%, 0 0, 100% 0, 100% 80%, 50% 100%);
-}
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
 }
 .header * {
   position: relative;
@@ -397,6 +482,71 @@ nav a:hover {
     width: 250px;
     height: 210px;
   }
+}
+@media screen and (max-width: 920px) and (min-width: 480px) {
+  .about__container .container-image img {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.oferta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 500px;
+  background: url(../../img/image3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.oferta * {
+  position: relative;
+}
+.oferta__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 50px 0;
+  color: #fff;
+}
+.footer__container .info .icons {
+  width: 60%;
+}
+.footer__container .info .icons a {
+  width: 50px;
+  height: 50px;
+}
+.footer__container .contact .icons {
+  width: 40%;
+}
+.footer__container .contact .icons a {
+  width: 50px;
+  height: 50px;
+}
+.footer__container .contact .icons a {
+  background: transparent;
+}
+.footer__container .contact .icons a:hover {
+  background: transparent;
 }
 
 /*# sourceMappingURL=estilos.css.map */
