@@ -1,0 +1,17 @@
+// ICONOS
+
+.icons{
+    @include dflex(space-between, center, row nowrap);
+
+    a{
+        @include dflex(center, center, row nowrap);
+        background: $color-primario-restaurante;
+        border-radius: 50%;
+        color: $color-blanco;
+        transition: all .5s;
+
+        &:hover{
+            background: $color-primario-restaurante-dark;
+        }
+    }
+}

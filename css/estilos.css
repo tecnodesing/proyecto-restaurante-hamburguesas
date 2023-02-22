@@ -6,19 +6,19 @@
 }
 @font-face {
   font-family: "dancing";
-  src: url(fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+  src: url(../../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: "cube";
-  src: url(fonts/cube/Cube.ttf);
+  src: url(../../fonts/cube/Cube.ttf);
 }
 @font-face {
   font-family: "neon";
-  src: url(fonts/neon/Neon.ttf);
+  src: url(../../fonts/neon/Neon.ttf);
 }
 @font-face {
   font-family: "teko";
-  src: url(fonts/Teko/Teko-Regular.ttf);
+  src: url(../../fonts/Teko/Teko-Regular.ttf);
 }
 * {
   margin: 0;
@@ -198,6 +198,26 @@ h5 {
   margin: 0 30px;
 }
 
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  background: #ff7b00;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s;
+}
+.icons a:hover {
+  background: #cc6200;
+}
+
 nav {
   position: absolute;
   top: 0;
@@ -210,6 +230,15 @@ nav {
   align-items: center;
   flex-flow: row wrap;
 }
+@media screen and (max-width: 480px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    height: auto;
+  }
+}
 nav a {
   color: #222;
   padding: 0 20px;
@@ -217,6 +246,157 @@ nav a {
 }
 nav a:hover {
   color: #ff7b00;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 600px;
+  background: url(../../img/image1.jpg);
+  background-size: cover;
+  background-position: bottom;
+  clip-path: polygon(0 80%, 0 0, 100% 0, 100% 80%, 50% 100%);
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.header * {
+  position: relative;
+}
+
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+@media screen and (max-width: 480px) {
+  .about__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+}
+@media screen and (max-width: 920px) and (min-width: 480px) {
+  .about__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+  }
+}
+.about__container .content {
+  flex: 0 0 50%;
+}
+.about__container .content .icons {
+  width: 70%;
+  font-size: 30px;
+}
+.about__container .content .icons a {
+  width: 70px;
+  height: 70px;
+}
+@media screen and (max-width: 480px) {
+  .about__container .content .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 90%;
+    font-size: 25px;
+  }
+  .about__container .content .icons a {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 920px) and (min-width: 480px) {
+  .about__container .content .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+    font-size: 25px;
+  }
+  .about__container .content .icons a {
+    width: 60px;
+    height: 60px;
+  }
+}
+.about__container .container-image {
+  position: relative;
+  flex: 0 0 400px;
+}
+.about__container .container-image::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: -40px;
+  width: 100%;
+  height: 100%;
+  background: #ff7b00;
+  z-index: -1;
+}
+.about__container .container-image .image {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 480px) {
+  .about__container .container-image {
+    flex: 0 0 0;
+  }
+  .about__container .container-image .image {
+    width: 250px;
+    height: 200px;
+  }
+  .about__container .container-image::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    width: 95%;
+    height: 100%;
+    background: #ff7b00;
+    z-index: -1;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 920px) and (min-width: 480px) {
+  .about__container .container-image {
+    flex: 0 0 0;
+  }
+  .about__container .container-image .image {
+    width: 350px;
+    height: 300px;
+  }
+}
+.about__container .container-image img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+}
+.about__container .container-image img:hover {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 480px) {
+  .about__container .container-image img {
+    width: 250px;
+    height: 210px;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

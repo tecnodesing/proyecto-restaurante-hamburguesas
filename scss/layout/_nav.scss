@@ -6,6 +6,10 @@ nav{
     height: 50px;
     background: rgba($color: #fff, $alpha: 0.65);
     @include dflex(center, center, row wrap);
+    @include phones(){
+        @include dflex(center, center, column nowrap);
+        height: auto;
+   }
 
     a{
         color: $color-gris700;
