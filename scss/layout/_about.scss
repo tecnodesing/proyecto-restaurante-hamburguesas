@@ -1,13 +1,7 @@
 .about{
     &__container{
         @include dflex(space-between, center, row wrap);
-        @include phones(){
-            @include dflex(center, center, column wrap);
-        }
-
-        @include tablets(){
-            @include dflex(center, center, column wrap);
-        }
+      
 
         .content{
             flex: 0 0 50%;
@@ -16,16 +10,6 @@
                 @include icons(70%, 70px, 70px);
                 font-size: 30px;
 
-                @include phones(){
-                    @include dflex(space-between, center, row wrap);
-                    @include icons(90%, 50px, 50px);
-                    font-size: 25px;
-                }
-                @include tablets(){
-                    @include dflex(space-between, center, row wrap);
-                    @include icons(100%, 60px, 60px);
-                    font-size: 25px;
-                }
             }
         }
 
@@ -49,35 +33,8 @@
                 height: 100%;
                }
 
-            @include phones(){
-               flex: 0 0 0;
 
-               .image{
-                    width: 250px;
-                    height: 200px;
-                }
 
-               &::before{
-                    content: '';
-                    position: absolute;
-                    top: 30px;
-                    left: -30px;
-                    width: 95%;
-                    height: 100%;
-                    background: $color-primario-restaurante;
-                    z-index: -1;
-                    margin: 10px;
-                }
-            }
-
-            @include tablets(){
-                flex: 0 0 0;
- 
-                .image{
-                 width: 350px;
-                 height: 300px;
-                }
-             }
 
             img{
                 width: 100%;
@@ -90,15 +47,7 @@
                     transform: scale(1.1);
                 }
 
-                @include phones(){
-                    width: 250px;
-                    height: 210px;
-                }
 
-                @include tablets(){
-                    width: 100%;
-                    height: 300px;
-                }
             }
         }
     }

@@ -1,0 +1,72 @@
+//MEDIA QUERY
+$desktop:  1024px;
+$tablets:  790px;
+$phones:  550px;
+
+@mixin desktop {
+     @media screen and (max-width: $desktop) {
+          @content;
+     }
+}
+
+@mixin tablets {
+     @media screen and (max-width: $tablets){
+          @content;
+     }
+}
+
+@mixin phones {
+     @media screen and (max-width: $phones) {
+          @content;
+     }
+}
+
+//Desktop
+
+@include desktop(){
+    .about{
+        &__container{
+            .content{
+                order: 1;
+                flex: 0 0 100% !important;
+                margin: 50px 0;
+            }
+
+            .container-image{
+                order: 0;
+                flex: 0 0 100% !important;
+                margin: 50px 0;
+            }
+        }
+    }
+
+
+    .icons{
+        width: 100% !important;
+    }
+}
+
+@include tablets(){
+
+    .card{
+        width: 45% !important;
+    }
+}
+
+@include phones(){
+    .card{
+        width: 100% !important;
+    }
+
+    .footer{
+        &__container{
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    .navbar{
+        flex-flow: column wrap !important;
+        width: 100%;
+        height: 100px;
+    }
+}

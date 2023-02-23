@@ -32,29 +32,3 @@
             height: $height;
         }
 }
-
-
-//MEDIA QUERY
-$desktop-max:  1024px;
-$desktop-min: 920px;
-$tablets-max:  920px;
-$tablets-min: 480px;
-$phones:  480px;
-
-@mixin desktop {
-     @media screen and (max-width: $desktop-max) and (min-width: $desktop-min) {
-          @content;
-     }
-}
-
-@mixin tablets {
-     @media screen and (max-width: $tablets-max) and (min-width: $tablets-min) {
-          @content;
-     }
-}
-
-@mixin phones {
-     @media screen and (max-width: $phones) {
-          @content;
-     }
-}
